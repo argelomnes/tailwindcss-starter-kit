@@ -1,36 +1,26 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    corePlugins: {
-        // preflight: false,
-    },
-    content: ['./public/*.{html,js}'],
+    content: ['./dist/*.{html,js}'],
     theme: {
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: '1.5rem',
+                md: '2.25rem',
+                xl: '0',
+            },
+        },
         screens: {
             xs: '375px',
             ...defaultTheme.screens,
         },
         extend: {
-            container: {
-                center: true,
-                padding: {
-                    DEFAULT: '1.5rem',
-                    md: '2.25rem',
-                    xl: '0',
-                },
-            },
             colors: {
-                primary: {
-                    800: '#1C2D8C',
-                    900: '#162473',
-                },
-                gray: {
-                    200: '#d6d6d6',
-                    300: '#bfbfbf',
-                },
+                brand: "rgb(var(--color-brand) / <alpha-value>)",
             },
             fontFamily: {
-                sans: ['Satoshi', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
             fontSize: {},
             spacing: {},
@@ -51,5 +41,9 @@ module.exports = {
             },
         },
     },
-    plugins: [],
-};
+    plugins: [
+        // require('@tailwindcss/forms'),
+        // require('@tailwindcss/line-clamp'),
+        // require('@tailwindcss/typography')
+    ],
+}
