@@ -10,4 +10,4 @@ I use VS Code and use the following extensions:
 
 1. Tailwind CSS IntelliSense
 2. Live Server (Five Server)
-    - To use: Right-Click a dist in the Explorer > Open with Five Server (root)
+    - To use: Right-Click dist in the Explorer > Open with Five Server (root)
